@@ -1,0 +1,16 @@
+# Root .gitignore file
+
+# OS-Specific System Files
+.DS_Store
+.vscode
+
+# Personal files
+drafts
+notes.md
+
+# Environment secret variables
+.env.*
+.env
+
+# Python files
+__pycache__
