@@ -3,7 +3,7 @@
 import grpc
 import warnings
 
-import contracts.orders_pb2 as orders__pb2
+import gateway.rpc.contracts.orders_pb2 as orders__pb2
 
 GRPC_GENERATED_VERSION = '1.84.0'
 GRPC_VERSION = grpc.__version__

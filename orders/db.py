@@ -1,5 +1,6 @@
+from contextlib import contextmanager
 import os
-from typing import Iterator
+from typing import Generator
 
 from sqlalchemy import Engine, create_engine
 from sqlalchemy.orm import Session, sessionmaker
@@ -24,17 +25,12 @@ engine = create_engine_from_env()
 SessionLocal = create_sessionmaker(engine)
 
 
-def get_session() -> Iterator[Session]:  # TODO?: в чем разница между Generator и Iterator?
+@contextmanager
+def get_session() -> Generator[Session, None, None]:  # TODO?: в чем разница между Generator и Iterator?
     session = SessionLocal()
-
     try:
         yield session
     except Exception:
         session.rollback()
     finally:
         session.close()
-
-        
-        
-
-

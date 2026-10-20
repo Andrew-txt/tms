@@ -6,6 +6,9 @@
 
 # Personal files
 drafts
+draft_*
+
+*_notes.md
 notes.md
 
 # Environment secret variables
@@ -14,3 +17,6 @@ notes.md
 
 # Python files
 __pycache__
+
+# Other files
+orders_db
